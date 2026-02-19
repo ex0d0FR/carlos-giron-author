@@ -3,6 +3,7 @@ import { siteContent } from '../../content';
 
 export function Hero() {
   const { hero } = siteContent;
+  // Hero section for the landing page
 
   return (
     <section 
