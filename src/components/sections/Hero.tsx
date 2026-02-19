@@ -2,7 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { siteContent } from '../../content';
 
 export function Hero() {
-  const { hero, book } = siteContent;
+  const { hero } = siteContent;
 
   return (
     <section 
