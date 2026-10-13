@@ -1,14 +1,16 @@
 import { User } from 'lucide-react';
 import { siteContent } from '../../content';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export function About() {
   const { author } = siteContent;
+  const sectionRef = useScrollAnimation<HTMLElement>();
 
   return (
-    <section 
+    <section
+      ref={sectionRef}
       id="autor"
-      className="section-padding bg-white dark:bg-dark-bg 
-                 light:bg-slate-50 transition-colors duration-300"
+      className="animate-on-scroll section-padding bg-slate-50 dark:bg-dark-bg transition-colors duration-300"
     >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -25,14 +27,12 @@ export function About() {
             </div>
             
             {/* Title */}
-            <h2 className="heading-lg text-slate-900 dark:text-white 
-                          light:text-slate-900 mb-6">
+            <h2 className="heading-lg text-slate-900 dark:text-white mb-6">
               {author.name}
             </h2>
             
             {/* Bio */}
-            <div className="text-body text-slate-600 dark:text-slate-300 
-                           light:text-slate-600 space-y-4">
+            <div className="text-body text-slate-600 dark:text-slate-300 space-y-4">
               {author.bio.split('\n\n').map((paragraph, index) => (
                 <p key={index}>{paragraph.trim()}</p>
               ))}

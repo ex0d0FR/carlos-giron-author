@@ -6,8 +6,8 @@ import { About } from './components/sections/About';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-bg dark:bg-dark-bg light:bg-white
-                    text-slate-900 dark:text-slate-50 light:text-slate-900
+    <div className="min-h-screen bg-white dark:bg-dark-bg
+                    text-slate-900 dark:text-slate-50
                     transition-colors duration-300">
       <Header />
       <main>

@@ -8,8 +8,7 @@ export function Footer() {
   return (
     <footer 
       id="contacto"
-      className="bg-slate-900 dark:bg-slate-950 light:bg-slate-900 
-                 text-white py-12 transition-colors duration-300"
+      className="bg-slate-900 dark:bg-slate-950 text-white py-12 transition-colors duration-300"
     >
       <div className="section-container">
         <div className="grid md:grid-cols-3 gap-8 items-center">

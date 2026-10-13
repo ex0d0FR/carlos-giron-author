@@ -1,14 +1,16 @@
 import { ExternalLink, BookOpen } from 'lucide-react';
 import { siteContent } from '../../content';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export function Book() {
   const { book } = siteContent;
+  const sectionRef = useScrollAnimation<HTMLElement>();
 
   return (
-    <section 
+    <section
+      ref={sectionRef}
       id="libro"
-      className="section-padding bg-slate-50 dark:bg-dark-card 
-                 light:bg-white transition-colors duration-300"
+      className="animate-on-scroll section-padding bg-white dark:bg-dark-card transition-colors duration-300"
     >
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -49,20 +51,17 @@ export function Book() {
             </div>
             
             {/* Title */}
-            <h2 className="heading-lg text-slate-900 dark:text-white 
-                          light:text-slate-900 mb-4">
+            <h2 className="heading-lg text-slate-900 dark:text-white mb-4">
               {book.title}
             </h2>
             
             {/* Subtitle */}
-            <p className="text-lg text-primary-500 dark:text-primary-400 
-                         light:text-primary-600 font-medium mb-6">
+            <p className="text-lg text-primary-600 dark:text-primary-400 font-medium mb-6">
               {book.subtitle}
             </p>
             
             {/* Description */}
-            <div className="text-body text-slate-600 dark:text-slate-300 
-                           light:text-slate-600 mb-8 space-y-4">
+            <div className="text-body text-slate-600 dark:text-slate-300 mb-8 space-y-4">
               {book.description.split('\n\n').map((paragraph, index) => (
                 <p key={index}>{paragraph.trim()}</p>
               ))}

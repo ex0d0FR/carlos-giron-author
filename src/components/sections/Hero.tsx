@@ -9,9 +9,8 @@ export function Hero() {
     <section 
       id="inicio"
       className="relative min-h-screen flex items-center justify-center
-                 bg-gradient-to-br from-dark-bg via-slate-900 to-slate-800
+                 bg-gradient-to-br from-slate-100 via-slate-50 to-white
                  dark:from-dark-bg dark:via-slate-900 dark:to-slate-800
-                 light:from-white light:via-slate-50 light:to-slate-100
                  overflow-hidden"
     >
       {/* Background Pattern */}
@@ -35,24 +34,23 @@ export function Hero() {
       <div className="section-container relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Title */}
-          <h1 className="heading-xl text-white dark:text-white light:text-slate-900
+          <h1 className="heading-xl text-slate-900 dark:text-white
                          mb-6 animate-fade-in">
             <span className="text-gradient">{hero.title}</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-slate-300 dark:text-slate-300 
-                        light:text-slate-600 mb-8 animate-fade-in"
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300
+                        mb-8 animate-fade-in"
              style={{ animationDelay: '0.2s' }}>
             {hero.subtitle}
           </p>
           
           {/* Author Name */}
-          <p className="text-lg text-slate-400 dark:text-slate-400 
-                        light:text-slate-500 mb-10 animate-fade-in"
+          <p className="text-lg text-slate-500 dark:text-slate-400
+                        mb-10 animate-fade-in"
              style={{ animationDelay: '0.3s' }}>
-            Por <span className="text-primary-400 dark:text-primary-400 
-                                 light:text-primary-600 font-semibold">
+            Por <span className="text-primary-600 dark:text-primary-400 font-semibold">
               {siteContent.author.name}
             </span>
           </p>
